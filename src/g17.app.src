@@ -1,0 +1,19 @@
+{application, g17,
+ [
+  {description, "17g platform driver"},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  inets
+                 ]},
+  {mod, { g17_app, []}},
+  {env, [{config,
+            [{address, "http://localhost:14800/"},
+            {game_id, 1},
+            {server_id,1},
+            {money_key, "money_key"},
+            {simple_key, "simple_key"}]
+          }]}
+ ]}.
